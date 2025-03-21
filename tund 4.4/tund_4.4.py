@@ -84,12 +84,3 @@ else:
     for i in range(swap_count):
         numbers[i],numbers[-(i+1)]=numbers[-(i+1)],numbers[i]
     print("Uus nimekiri pärast vahetamist:",numbers)
-
-#Ü11
-
-n=int(input("Sisesta, mitu tähte kuvada: "))
-alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-first_list=alphabet[:n]
-second_list=[alphabet[i]*(i+1) for i in range(n)]
-print("Esimene järjend:",first_list)
-print("Teine järjend:",second_list)
