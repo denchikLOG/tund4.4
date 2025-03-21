@@ -58,23 +58,25 @@ else:
     print("Viganenimi! Nimis võivad olla ainult tähed.")
 
 #Ü7
-
-numbers=input("Sisesta numbrid, eraldatud komadega: ")
-numbers=[int(num)for num in numbers]
+numbers=[]
+for i in range(10):
+    number=int(input("Sisesta numbrid, eraldatud komadega: "))
+    numbers.append(number)
 sort_type=input("Kas soovite sorteerida kasvavalt (asc) või kahanevalt (desc)? ")
 if sort_type=="asc":
-    sort_numbers=sorted(numbers,key=abs)
-    print("Kasvav sorteerimine absoluutväärtuse järgi:",sort_numbers)
+    sort_number=sorted(numbers,key=abs)
+    print("Kasvav sorteerimine absoluutväärtuse järgi:",sort_number)
 elif sort_type=="desc":
-    sort_numbers=sorted(numbers,key=abs,reverse=True)
-    print("Kahanev sorteerimine absoluutväärtuse järgi:",sort_numbers)
+    sort_number=sorted(numbers,key=abs,reverse=True)
+    print("Kahanev sorteerimine absoluutväärtuse järgi:",sort_number)
 else:
     print("Vigane sisend! Palun sisestage 'asc' või 'desc'.")
 
 #Ü5
-
-numbers=input("Sisesta numbrid, eraldatud komadega: ")
-numbers=[int(num)for num in numbers]
+numbers=[]
+for i in range(5):
+    number=float(input("Sisesta numbrid, eraldatud komadega: "))
+    numbers.append(number)
 swap_count=int(input("Kui palju elemente soovite vahetada? "))
 if swap_count>len(numbers)//2:
     print("Sa ei saa vahetada rohkem elemente kui listis on pool.")
